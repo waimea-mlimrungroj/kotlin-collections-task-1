@@ -154,13 +154,9 @@ fun getNewMonkey(monkeyList: MutableList<String>) {
  */
 fun monkeyCounter(monkeyList: List<String>): String {
     // return the number of monkeys in the list
-    return when (monkeyList.size) {
-        0 -> "There are no monkeys!"
-        1 -> "There is 1 monkey!"
-        else -> "There are ${monkeyList.size} monkeys!"
-    }
+    val numMonkey = monkeyList.size
+    return "There are $numMonkey monkeys!"
 }   // FIXME!
-
 
 
 /**
@@ -172,32 +168,33 @@ fun longestMonkeyName(monkeyList: List<String>): String {
     for (name in monkeyList) {
         if (name.length > longestName.length) {
             longestName = name
+        }
+        return longestName
+
     }
-    return longestName
 
+
+    /**
+     * Removes the first monkey from the given list
+     * if the list is not empty
+     */
+    fun deleteFirstMonkey(monkeyList: MutableList<String>) {
+        // Remove the first one from the list
+
+        // Show some feedback
+        println("Removing monkey: NAME HERE")
+    }
+
+
+    /**
+     * Removes the last monkey from the given list
+     * if the list is not empty
+     */
+    fun deleteLastMonkey(monkeyList: MutableList<String>) {
+        // Remove the last one from the list
+      
+        // Show some feedback
+        println("Removing monkey: NAME HERE")
+    }
+    return monkeyList
 }
-
-
-/**
- * Removes the first monkey from the given list
- * if the list is not empty
- */
-fun deleteFirstMonkey(monkeyList: MutableList<String>) {
-    // Remove the first one from the list
-
-    // Show some feedback
-    println("Removing monkey: NAME HERE")
-}
-
-
-/**
- * Removes the last monkey from the given list
- * if the list is not empty
- */
-fun deleteLastMonkey(monkeyList: MutableList<String>) {
-    // Remove the last one from the list
-
-    // Show some feedback
-    println("Removing monkey: NAME HERE")
-}
-
